@@ -1,0 +1,4 @@
+para abrir a posição do mouse use o seguinte comando
+
+abra o cmd na pasta que tá o sistema
+comandos > python > from mouseinfo import mouseInfo > mouseInfo()

@@ -1,0 +1,110 @@
+import pyautogui
+import time
+import keyboard  # Biblioteca para monitorar o teclado
+import sys  # Para sair do script
+import config  # Importando as variáveis de configuração
+
+# Função para exibir alerta
+def alerta(msg):
+    pyautogui.alert(msg)
+
+# Função para verificar se ESC foi pressionado
+def verificar_esc(numero_formulario):
+    if keyboard.is_pressed('esc'):
+        alerta(f"O sistema foi interrompido no formulário número {numero_formulario}")
+        sys.exit()
+
+# Função para preencher o formulário com os dados fornecidos
+def preencher_formulario(dados, numero_formulario):
+    try:
+        pyautogui.click(414,119, duration=2)  # 1 - Incluir
+        pyautogui.click(851,413, duration=2)  # 2 - clicar em sim
+        pyautogui.click(847,226, duration=2)  # 3 - clicar em cliente/fornecedor
+        pyautogui.click(473,192, duration=2)  # 4 - clicar em pesquisar
+        pyautogui.write('%')  #5 Envia o símbolo '%'
+        pyautogui.write('SEBASTIAO')  #6 Digitar o nome do cliente/fornecedor
+        pyautogui.press('enter')  #7 - Aperta enter
+        pyautogui.press('enter')  #8 - Aperta enter
+
+        pyautogui.click(413,271, duration=2)  #9 CFOP1
+        pyautogui.write('5405')  #10 Digitar o CFOP1
+        pyautogui.press('enter')  #11 - Aperta enter
+
+        pyautogui.click(505,392, duration=2)  #12 Clicar em vendedor
+        pyautogui.click(748,234, duration=2)  #13 clicar em pesquisar
+        pyautogui.write('TOP VIDA')  #14 Digitar
+        pyautogui.press('enter')  #15 - Aperta enter
+        pyautogui.press('enter')  #16 - Aperta enter
+        pyautogui.press('enter')  #17 - Aperta enter
+
+        pyautogui.click(727,394, duration=2)  #18 Clicar em Televenda
+        pyautogui.click(750,236, duration=2)  #19 clicar em pesquisar
+        pyautogui.write('TOP VIDA')  #20 Digitar
+        pyautogui.press('enter')  #21 - Aperta enter
+        pyautogui.press('enter')  #22 - Aperta enter
+        pyautogui.press('enter')  #23 - Aperta enter
+
+        pyautogui.click(1025,393, duration=2)  #24 Clicar em transportadora
+        pyautogui.click(567,188, duration=2)  #25 clicar em pesquisar
+        pyautogui.write('TOP VIDA')  #26 Digitar
+        pyautogui.press('enter')  #27 - Aperta enter
+        pyautogui.press('enter')  #28 - Aperta enter
+
+        pyautogui.click(410,552, duration=2)  #29 Clicar em frete
+        pyautogui.click(396,582, duration=2)  #30 Clicar em CIF
+
+        pyautogui.click(510,176, duration=2)  #31 Clicar em Dados complementares
+        pyautogui.click(368,313, duration=2)  #32 Clicar em natureza da operação
+        pyautogui.write('VENDA ESTADUAL - BA')  #33 Digitar
+
+        pyautogui.click(732,175, duration=2)  #34 observações/messagens
+        pyautogui.click(456,223, duration=2)  #35 observação/mensagem 1
+        pyautogui.write('PE.:066/2023 (MEDIC.)  - (PROCESSO: 088 - EMPENHO: 623) - PROC. ADM N-863/2023 - ATA  Nº PERP066/2023')  #36 Digitar
+
+        #inicido de produtos
+        pyautogui.click(630,181, duration=2)  #37 clicar em itens
+        pyautogui.click(406,219, duration=2)  #38 clicar em inserir cod
+        pyautogui.write('4314')  #39 Digitar cod
+        pyautogui.press('enter')  #40 - Aperta enter
+        pyautogui.press('enter')  #41 - Aperta enter
+        pyautogui.write('22100663')  #42 Digitar lote
+        pyautogui.press('enter')  #43 - Aperta enter
+        pyautogui.press('enter')  #44 - Aperta enter
+        pyautogui.write('03102026')  #45 Digitar data
+        pyautogui.press('enter')  #46 - Aperta enter
+        pyautogui.write('60')  #47 Digitar st tributaria
+        pyautogui.press('enter')  #48 - Aperta enter
+        pyautogui.write('5405')  #49 Digitar CFOP
+        pyautogui.press('enter')  #50 - Aperta enter
+        pyautogui.press('enter')  #51 - Aperta enter
+        pyautogui.write('100')  #52 Digitar quantidade
+        pyautogui.press('enter')  #53 - Aperta enter
+        pyautogui.write('11')  #54 Digitar preço
+        pyautogui.press('enter')  #55 - Aperta enter
+        pyautogui.click(997,295, duration=2)  #56 Clicar em ok
+        #fim do produtos
+
+        pyautogui.click(458,123, duration=2)  #57 clicar
+        pyautogui.click(772,412, duration=2)  #58 clicar
+        pyautogui.click(363,123, duration=2)  #59 clicar
+        pyautogui.click(564,369, duration=2)  #60 clicar
+        pyautogui.click(637,406, duration=2)  #61 clicar
+        pyautogui.click(491,400, duration=2)  #62 clicar
+        pyautogui.write('Confecção a pedido de Adenildes, em 13/05/2025.')  #63 Digitar
+
+        pyautogui.click(500,481, duration=2)  #64 clicar
+        pyautogui.write('83')  #65 Digitar
+        pyautogui.click(567,476, duration=2)  #66 clicar
+        pyautogui.write('220315')  #67 Digitar
+        pyautogui.click(684,508, duration=2)  #68 clicar
+
+        
+
+    except Exception as e:
+        alerta(f"Ocorreu um erro no formulário {numero_formulario}")
+        sys.exit()
+
+# Loop para preencher todos os formulários
+for numero_formulario, formulario in enumerate(config.formularios, start=1):
+    preencher_formulario(formulario, numero_formulario)
+    time.sleep(2)  # Aguarda 2 segundos antes de preencher o próximo formulário

@@ -1,0 +1,82 @@
+        pyautogui.click(22, 34, duration=2)  # 1 - Clicar em cadastros
+        pyautogui.click(56, 261, duration=2)  # 2 - Clicar em produtos
+        pyautogui.click(284, 257, duration=2)  # 3 - Clicar em cadastros
+        pyautogui.press('enter')  # 4 - Aperta o enter
+
+        pyautogui.click(526, 195, duration=2)  # 5 - Clicar em código de barra e inserir
+        pyautogui.write(dados["codigo_barra"])  # Usando o código de barra
+
+        pyautogui.click(506, 233, duration=2)  # 6 - Clicar em descrição de venda e inserir
+        pyautogui.write(dados["descricao_venda"])  # Descrição de venda
+
+        pyautogui.click(505, 270, duration=2)  # 7 - Clicar em compras
+        pyautogui.click(701, 309, duration=2)  # 8 - Clicar em Marca e inserir
+        pyautogui.write(dados["marca"])  # Marca
+
+        pyautogui.click(471, 347, duration=2)  # 9 - Clicar em descrição nota fiscal e inserir
+        pyautogui.write(dados["descricao_nota_fiscal"])  # Descrição nota fiscal
+
+        pyautogui.click(1006, 381, duration=2)  # 10 - Clicar na lupa de unidade
+        pyautogui.click(691, 189, duration=2)  # 11 - Clicar em inserir UNI
+        pyautogui.write('%')  # Envia o símbolo '%'
+        pyautogui.keyDown('shift')  # Pressiona a tecla Shift
+        pyautogui.write(dados["unidade"])  # Unidade
+        pyautogui.keyUp('shift')  # Solta a tecla Shift
+        pyautogui.press('enter')  # 12 - Aperta enter
+
+        pyautogui.press('enter')  # 13 - Aperta enter
+
+        pyautogui.click(1008, 423, duration=2)  # 15 - Grupo de produtos
+        pyautogui.click(765, 237, duration=2)  # 15 - Seleciona o grupo
+        pyautogui.write(dados["grupo_produto"])  # Grupo de produto
+        pyautogui.press('enter')  # 15 - Pressiona enter
+        pyautogui.press('enter')  # 15 - Pressiona enter
+
+        pyautogui.click(985, 511, duration=2)  # 16 - Indústria
+        pyautogui.click(716, 235, duration=2)  # 16 - Seleciona a indústria
+        pyautogui.write(dados["industria"])  # Indústria
+        pyautogui.press('enter')  # 16 - Pressiona enter
+        pyautogui.press('enter')  # 15 - Pressiona enter
+
+        #17 por produto / Paramêtro
+        pyautogui.click(426,151, duration=2)
+        pyautogui.click(599,344, duration=2)
+        pyautogui.click(435,182, duration=2)
+
+        pyautogui.click(383, 379, duration=2)  # 18 - Clicar em fiscal
+        pyautogui.click(383, 397, duration=2)  # 18 - Seleciona fiscal
+        pyautogui.click(1000, 213, duration=2)  # 18 - Clica em campo fiscal
+        pyautogui.click(604, 195, duration=2)  # 18 - Clica em campo fiscal
+        pyautogui.write('%')  # Envia o símbolo '%'
+        pyautogui.write(dados["descricao_fiscal"])  # Descrição fiscal
+        pyautogui.press('enter')  # 18 - Aperta enter
+        pyautogui.press('enter')  # 18 - Pressiona enter
+
+        pyautogui.click(478, 179, duration=2)  # 19 - Diversos
+        pyautogui.click(395, 385, duration=2)  # 19 - Preenche o campo de diversos
+        pyautogui.write(dados["cod_anvisa"])  # Código ANVISA
+
+        pyautogui.click(537, 179, duration=2)  # 20 - Fornecedores
+        pyautogui.click(1004, 237, duration=2)  # 20 - Clica em fornecedor
+        pyautogui.click(752, 236, duration=2)  # 20 - Seleciona fornecedor
+        pyautogui.write(dados["fornecedores"])  # Fornecedores
+        pyautogui.press('enter')  # 20 - Aperta enter
+        pyautogui.press('enter')  # 20 - Aperta enter
+
+        pyautogui.click(502, 151, duration=2)  # 21 - Por empresas / diversos
+        pyautogui.click(483, 175, duration=2)  # 21 - Clica em empresas
+        pyautogui.click(753, 505, duration=2)  # 21 - Clica em outro campo
+        pyautogui.click(642, 185, duration=2)  # 21 - Clica no campo empresa
+        pyautogui.write(dados["empresa"])  # Empresa
+        pyautogui.press('enter')  # 21 - Aperta enter
+        pyautogui.press('enter')  # 21 - Aperta enter
+
+        pyautogui.click(679, 177, duration=2)  # 22 - Fiscais nova
+        pyautogui.click(416, 238, duration=2)  # 22 - Clica no primeiro campo fiscal
+        pyautogui.write(dados["fiscais_nova_1"])  # Fiscais nova 1
+        pyautogui.press('enter')  # 22 - Aperta enter
+        pyautogui.click(428, 289, duration=2)  # 22 - Clica no segundo campo fiscal
+        pyautogui.write(dados["fiscais_nova_2"])  # Fiscais nova 2
+        pyautogui.press('enter')  # 22 - Aperta enter
+
+        pyautogui.click(360,150, duration=2)  # 1 - Inicio
