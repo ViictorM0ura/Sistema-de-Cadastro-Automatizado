@@ -18,15 +18,15 @@ df_cleaned.dropna(inplace=True)
 # Estruturar os dados no formato desejado
 formularios = [
     {
-        'cliente': 'LUZ',
-        'cfop': '5102',
-        'vendedor': 'TOP VIDA',  # Ajuste conforme necessário
-        'televenda': 'TOP VIDA',  # Ajuste conforme necessário
-        'transportadora': 'TOP VIDA',  # Ajuste conforme necessário
-        'naturezaoperacao': 'VENDA ESTADUAL - BA',  # Ajuste conforme necessário
-        'observacao': 'P.E. N. 008/2024 (PENSO) PROC. ADM. N. 026/2024 (LOTE 08) VENC. DO CONTRATO EM 08/10/2025',
-        'comentario': 'Confecção a pedido de Adenildes, em 15/05/2025.',  # Ajuste conforme necessário
-        'user': '83',
+        'cliente': ' ',
+        'cfop': ' ',
+        'vendedor': ' ',  # Ajuste conforme necessário
+        'televenda': ' ',  # Ajuste conforme necessário
+        'transportadora': ' ',  # Ajuste conforme necessário
+        'naturezaoperacao': ' ',  # Ajuste conforme necessário
+        'observacao': ' ',
+        'comentario': ' ',  # Ajuste conforme necessário
+        'user': ' ',
         'password': '',
         'produtos': [
             {
