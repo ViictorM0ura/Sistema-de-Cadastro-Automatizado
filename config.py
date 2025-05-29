@@ -27,7 +27,7 @@ formularios = [
         'observacao': 'P.E. N. 008/2024 (PENSO) PROC. ADM. N. 026/2024 (LOTE 08) VENC. DO CONTRATO EM 08/10/2025',
         'comentario': 'Confecção a pedido de Adenildes, em 15/05/2025.',  # Ajuste conforme necessário
         'user': '83',
-        'password': '220315',
+        'password': '',
         'produtos': [
             {
                 'codigo': str(row['codigo']),
